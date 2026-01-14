@@ -1,36 +1,172 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌦️ Warp Weather App
 
-## Getting Started
+A simple weather application built with **Next.js (App Router)** and **React** as part of the Warp Development Frontend Engineer assessment.
 
-First, run the development server:
+The application allows users to search for a city and view its current weather conditions, including temperature, condition, description, and an icon.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+---
+
+## 🚀 Features
+
+- City-based weather search
+
+- Displays:
+
+    - City name
+
+    - Temperature (Celsius)
+
+    - Weather condition
+
+    - Description
+
+    - Weather icon
+
+- Loading state while fetching data
+
+- User-friendly error handling
+
+- API key securely handled via Next.js API Route
+
+- Fully typed with TypeScript
+
+- Basic unit tests using Vitest and React Testing Library
+
+---
+
+
+## 🧰 Tech Stack
+
+- **Next.js 16 (App Router)**
+
+- **React**
+
+- **TypeScript**
+
+- **OpenWeatherMap API**
+
+- **CSS Modules**
+
+- **Vitest + React Testing Library** (unit tests)
+
+---
+
+## 🌡️ Temperature Unit
+
+- **Celsius (°C)**
+
+---
+
+## 🔐 API Key Handling (Best Practice)
+
+The OpenWeatherMap API key is **not exposed to the client**.
+
+
+Instead:
+
+- A Next.js API route (/api/weather) proxies requests to OpenWeatherMap
+
+- The API key is stored securely in an environment variable (.env.local)
+
+This follows recommended best practices for security and separation of concerns.
+
+---
+
+## 🧪 Testing
+
+Basic unit tests are included for key components:
+
+- `WeatherForm`
+
+- `WeatherResult`
+
+- `ErrorMessage`
+
+
+Tests are written using:
+
+- **Vitest**
+
+- **@testing-library/react**
+
+- **jsdom environment**
+
+
+Run tests with:
+```
+npm run test
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Running the Project Locally
+### 1. Install dependencies
+```
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. Create environment variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create a .env.local file in the project root:
+```
+OPENWEATHER_API_KEY=your_api_key_here
+```
 
-## Learn More
+3. Start the development server
+```
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The app will be available at:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+http://localhost:3000
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📁 Project Structure (Phase 1)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+app/
+ ├─ api/
+ │   └─ weather/
+ │       └─ route.ts
+ ├─ layout.tsx
+ └─ page.tsx
+
+components/
+ ├─ WeatherApp.tsx
+ ├─ WeatherForm.tsx
+ ├─ WeatherResult.tsx
+ ├─ ErrorMessage.tsx
+ └─ __tests__/
+     ├─ WeatherForm.test.tsx
+     ├─ WeatherResult.test.tsx
+     └─ ErrorMessage.test.tsx
+
+utils/
+ ├─ openWeatherApiResponse.ts
+ └─ metaData.ts
+
+styles/
+ ├─ page.module.css
+ └─ Weather.module.css
+
+
+## 🧠 Design Decisions
+
+Functional-first approach: Phase 1 prioritizes correctness, structure, and clarity over UI polish.
+
+Type safety: All API responses and component props are strongly typed.
+
+Accessibility: Error messages use role="alert" and aria-live="assertive".
+
+Maintainability: Clear separation of concerns between UI, API logic, and types.
+
+
+## 🔄 Future Improvements (Phase 2)
+
+UI/UX refinement
+
+Introduce TanStack Query for improved data fetching and caching
+
+Enhanced styling and layout
+
+Additional tests (integration level)
