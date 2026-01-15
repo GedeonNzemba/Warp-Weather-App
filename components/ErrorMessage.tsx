@@ -1,3 +1,9 @@
+/**
+ * Error message component.
+ * - Displays user-friendly error messages
+ * - Uses ARIA attributes for accessibility
+*/
+
 'use client';
 
 import { ErrorMessageProps } from "@/utils/openWeatherApiResponse"

@@ -1,3 +1,10 @@
+/**
+ * API route that proxies requests to OpenWeatherMap.
+ * - Hides API key from the client
+ * - Normalizes API response for frontend use
+ * - Handles API and validation errors
+*/
+
 import { OpenWeatherApiResponse, WeatherResponse } from '@/utils/openWeatherApiResponse';
 import { NextResponse} from 'next/server';
 import type { NextRequest } from "next/server";

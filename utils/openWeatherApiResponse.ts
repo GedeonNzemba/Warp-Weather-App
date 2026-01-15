@@ -1,3 +1,10 @@
+/**
+ * Type definitions for:
+ * - OpenWeatherMap API raw response
+ * - Normalized weather response used by the UI
+ * - Shared component props
+*/
+
 export interface OpenWeatherApiResponse {
     name: string;
     weather: Array<{

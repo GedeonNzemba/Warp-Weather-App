@@ -1,3 +1,11 @@
+/**
+ * City input form component.
+ * - Collects city name from user
+ * - Validates input
+ * - Triggers weather fetch on submit
+*/
+
+
 'use client';
 
 import React, { FormEvent, useState } from "react";
@@ -8,8 +16,10 @@ const WeatherForm = ({ onSubmit, isLoading }: WeatherFormProps) => {
     const [city, setCity] = useState<string>('');
 
     const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+        // Prevent full page reload
         event.preventDefault();
 
+        // Trim input to avoid invalid requests
         const trimmedCity = city.trim();
 
         if (!trimmedCity) {

@@ -1,3 +1,9 @@
+/**
+ * Home page (App Router entry point).
+ * - Displays app branding and description
+ * - Renders the main WeatherApp component
+*/
+
 import React from "react";
 import styles from "../styles/page.module.css";
 import WeatherApp from "../components/WeatherApp";

@@ -1,3 +1,10 @@
+/**
+ * Weather display component.
+ * - Displays city name, temperature (Celsius),
+ *   weather condition, description, and icon
+*/
+
+
 import { WeatherResultProps } from "@/utils/openWeatherApiResponse"
 import styles from "../styles/Weather.module.css"
 
