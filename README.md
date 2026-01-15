@@ -121,33 +121,33 @@ The app will be available at:
 
 http://localhost:3000
 
+---
 
 ## 📁 Project Structure (Phase 1)
 
+```
 app/
- ├─ api/
- │   └─ weather/
- │       └─ route.ts
- ├─ layout.tsx
- └─ page.tsx
-
+├── api/
+│   └── weather/
+│       └── route.ts
+├── layout.tsx
+└── page.tsx
 components/
- ├─ WeatherApp.tsx
- ├─ WeatherForm.tsx
- ├─ WeatherResult.tsx
- ├─ ErrorMessage.tsx
- └─ __tests__/
-     ├─ WeatherForm.test.tsx
-     ├─ WeatherResult.test.tsx
-     └─ ErrorMessage.test.tsx
-
+├── WeatherApp.tsx
+├── WeatherForm.tsx
+├── WeatherResult.tsx
+├── ErrorMessage.tsx
+└── __tests__/
+    ├── WeatherForm.test.tsx
+    ├── WeatherResult.test.tsx
+    └── ErrorMessage.test.tsx
 utils/
- ├─ openWeatherApiResponse.ts
- └─ metaData.ts
-
+├── openWeatherApiResponse.ts
+└── metaData.ts
 styles/
- ├─ page.module.css
- └─ Weather.module.css
+├── page.module.css
+└── Weather.module.css
+```
 
 
 ## 🧠 Design Decisions
