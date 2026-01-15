@@ -5,33 +5,27 @@ A simple weather application built with **Next.js (App Router)** and **React** a
 The application allows users to search for a city and view its current weather conditions, including temperature, condition, description, and an icon.
 
 
+🔗 **Live Demo (Vercel):**  
+https://warp-weather-app-lemon.vercel.app/
+
 ---
 
 ## 🚀 Features
 
 - City-based weather search
-
 - Displays:
-
-    - City name
-
-    - Temperature (Celsius)
-
-    - Weather condition
-
-    - Description
-
-    - Weather icon
-
-- Loading state while fetching data
-
-- User-friendly error handling
-
-- API key securely handled via Next.js API Route
-
+  - City name
+  - Temperature (**Celsius**)
+  - Weather condition
+  - Description
+  - Weather icon
+- **Full-screen loading overlay** while fetching data
+- User-friendly error handling for invalid cities and API issues
+- Secure API key handling via Next.js API Routes
 - Fully typed with TypeScript
-
-- Basic unit tests using Vitest and React Testing Library
+- Unit tests for core components
+- Clean, responsive UI with modern styling
+- Background video with accessible foreground content
 
 ---
 
@@ -39,16 +33,13 @@ The application allows users to search for a city and view its current weather c
 ## 🧰 Tech Stack
 
 - **Next.js 16 (App Router)**
-
 - **React**
-
 - **TypeScript**
-
 - **OpenWeatherMap API**
-
+- **TanStack Query (React Query)** – data fetching & caching
 - **CSS Modules**
-
-- **Vitest + React Testing Library** (unit tests)
+- **Vitest + React Testing Library**
+- **Vercel** (deployment)
 
 ---
 
@@ -90,7 +81,7 @@ Tests are written using:
 
 - **@testing-library/react**
 
-- **jsdom environment**
+- **jsdom**
 
 
 Run tests with:
@@ -131,12 +122,15 @@ app/
 │   └── weather/
 │       └── route.ts
 ├── layout.tsx
-└── page.tsx
+├── page.tsx
+├── providers.tsx
+├── globals.css
 components/
 ├── WeatherApp.tsx
 ├── WeatherForm.tsx
 ├── WeatherResult.tsx
 ├── ErrorMessage.tsx
+├── LoadingIndicator.tsx
 └── __tests__/
     ├── WeatherForm.test.tsx
     ├── WeatherResult.test.tsx
@@ -147,26 +141,48 @@ utils/
 styles/
 ├── page.module.css
 └── Weather.module.css
+public/
+├── warp-logo.svg
+├── 222841_medium.mp4
 ```
+
+---
 
 
 ## 🧠 Design Decisions
 
-Functional-first approach: Phase 1 prioritizes correctness, structure, and clarity over UI polish.
+- Functional-first approach: Core functionality and correctness were prioritized before UI polish.
+- Type safety: All API responses and component props are strongly typed.
+- Accessibility:
+    - Error messages use role="alert" and aria-live="assertive".
+    - Form inputs are properly labeled.
+- Separation of concerns:
+    - API logic isolated in route handlers
+    - UI components kept small and focused
+- TanStack Query:
+    - Handles loading, error, and caching states cleanly
+    - Improves scalability and maintainability
 
-Type safety: All API responses and component props are strongly typed.
 
-Accessibility: Error messages use role="alert" and aria-live="assertive".
-
-Maintainability: Clear separation of concerns between UI, API logic, and types.
+---
 
 
-## 🔄 Future Improvements (Phase 2)
+## 🔄 Phase 2 Enhancements
+- Improved UI and layout
+- Modern form and card styling
+- Full-screen loading overlay with spinner
+- Introduced TanStack Query
+- Background video integration
+- Deployed to Vercel
 
-UI/UX refinement
 
-Introduce TanStack Query for improved data fetching and caching
+---
 
-Enhanced styling and layout
+## 👤 Author
 
-Additional tests (integration level)
+**Gedeon Christ Nzemba**
+Frontend Engineer
+
+📧 Email: gedeon.christ2@gmail.com
+
+🔗 LinkedIn: https://www.linkedin.com/in/gedeon-christ-nzemba/
