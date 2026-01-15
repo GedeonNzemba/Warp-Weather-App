@@ -1,0 +1,22 @@
+.logo {
+    width: 10rem;
+    height: 10rem;
+    object-fit: contain;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /* background: var(--bg); */
+}
+
+.content {
+    width: 100%;
+    max-width: 420px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+
+}

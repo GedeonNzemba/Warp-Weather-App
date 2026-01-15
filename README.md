@@ -101,7 +101,7 @@ npm run test
 ## 🛠️ Running the Project Locally
 ### 1. Install dependencies
 ```
-npm install
+bun install
 ```
 
 2. Create environment variables
