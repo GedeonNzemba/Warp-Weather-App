@@ -185,4 +185,4 @@ Frontend Engineer
 
 📧 Email: gedeon.christ2@gmail.com
 
-🔗 LinkedIn: https://www.linkedin.com/in/gedeon-christ-nzemba/
+🔗 LinkedIn: https://www.linkedin.com/in/nzemba/
